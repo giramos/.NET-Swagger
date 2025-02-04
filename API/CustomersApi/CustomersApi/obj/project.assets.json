@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\germa\\source\\repos\\CustomersApi\\CustomersApi\\CustomersApi.csproj",
+      "projectUniqueName": "C:\\Users\\germa\\Source\\Repos\\.NET-Swagger\\API\\CustomersApi\\CustomersApi\\CustomersApi.csproj",
       "projectName": "CustomersApi",
-      "projectPath": "C:\\Users\\germa\\source\\repos\\CustomersApi\\CustomersApi\\CustomersApi.csproj",
+      "projectPath": "C:\\Users\\germa\\Source\\Repos\\.NET-Swagger\\API\\CustomersApi\\CustomersApi\\CustomersApi.csproj",
       "packagesPath": "C:\\Users\\germa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\germa\\source\\repos\\CustomersApi\\CustomersApi\\obj\\",
+      "outputPath": "C:\\Users\\germa\\Source\\Repos\\.NET-Swagger\\API\\CustomersApi\\CustomersApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

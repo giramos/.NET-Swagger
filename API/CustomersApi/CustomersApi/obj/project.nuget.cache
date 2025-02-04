@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dVBn9jHDXSW2W+hqxklcghS921FlVkkpqbQ+c6+hH2rRW08NO9FywZw2jWNzfq6RgB+TxUFr915SWwaJHft6/g==",
+  "dgSpecHash": "5VlOxNhzsusZIz6WvP9l4dw7TKR/9xiloZSIH1/0WnKL3g6t0h5x5g71a5tNDfSsFww5JX5mKz674NJvaj4mqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\germa\\source\\repos\\CustomersApi\\CustomersApi\\CustomersApi.csproj",
+  "projectFilePath": "C:\\Users\\germa\\Source\\Repos\\.NET-Swagger\\API\\CustomersApi\\CustomersApi\\CustomersApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\germa\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\germa\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
