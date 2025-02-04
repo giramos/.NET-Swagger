@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <h1>Gestión de Clientes</h1>
+
+    <table id="customers">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+        </tr>
+        <tr>
+            <td>Germán</td>
+            <td>Iglesias</td>
+            <td>german@terra.es</td>
+            <td>666999000</td>
+            <td>
+                <a href="#" class="myButton">Editar</a>
+                <a href="#" class="myButtonDelete">Eliminar</a>
+            </td>
+        </tr>
+        <tr>
+            <td>José</td>
+            <td>Mourinho</td>
+            <td>jose@terra.es</td>
+            <td>666111222</td>
+            <td>
+                <a href="#" class="myButton">Editar</a>
+                <a href="#" class="myButtonDelete">Eliminar</a>
+            </td>
+        </tr>
+    </table>
+
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .myButton {
+            box-shadow: 0px 1px 0px 0px #f0f7fa;
+            background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+            background-color: #33bdef;
+            border-radius: 6px;
+            border: 1px solid #057fd0;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px -1px 0px #5b6178;
+        }
+
+        .myButton:hover {
+            background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+            background-color: #019ad2;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .myButtonDelete {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #ed3434 5%, #d10214 100%);
+	background-color:#ed3434;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.myButtonDelete:hover {
+	background:linear-gradient(to bottom, #d10214 5%, #ed3434 100%);
+	background-color:#d10214;
+}
+.myButtonDelete:active {
+	position:relative;
+	top:1px;
+}
+    </style>
+</body>
+
+</html>

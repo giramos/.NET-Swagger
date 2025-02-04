@@ -4,12 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo style.css -->
+    <link rel="stylesheet" href="menu.css">
     <title>Index</title>
 </head>
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='http://'>Home</a></li>
+        <li><a class='dropdown-arrow' href='http://'>Products</a>
+            <ul class='sub-menus'>
+                <li><a href='http://'>Products 1</a></li>
+                <li><a href='http://'>Products 2</a></li>
+                <li><a href='http://'>Products 3</a></li>
+                <li><a href='http://'>Products 4</a></li>
+            </ul>
+        </li>
+        <li><a href='http://'>About</a></li>
+        <li><a class='dropdown-arrow' href='http://'>Services</a>
+            <ul class='sub-menus'>
+                <li><a href='http://'>Services 1</a></li>
+                <li><a href='http://'>Services 2</a></li>
+                <li><a href='http://'>Services 3</a></li>
+            </ul>
+        </li>
+        <li><a href='http://'>Contact Us</a></li>
+    </ul>
+</nav>
 
 <body>
     <h1>Gestión de Clientes</h1>
-
+    <a onclick="agregarCliente()" href="#" class="myButton">Agregar Cliente</a>
     <table id="customers">
         <tr>
             <th>Nombre</th>
@@ -39,88 +64,46 @@
             </td>
         </tr>
     </table>
+    <!-- Modal -->
+    <div id="modal" class="modale" aria-hidden="true">
+        <div class="modal-dialog">
 
-    <style>
-        #customers {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
+            <div class="modal-header">
+                <h2>Datos del Cliente</h2>
+                <a onclick="cerrarCliente()" href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
+            </div>
 
-        #customers td,
-        #customers th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
+            <div class="modal-body">
+                <input type="text" name="u" placeholder="Nombre" size="20" /><br/>
+                <input type="text" name="u" placeholder="Apellido" size="20" /><br/>
+                <input type="text" name="u" placeholder="Teléfono" size="20" /><br/>
+                <input type="text" name="u" placeholder="Email" size="20" /><br/>
+            </div>
 
-        #customers tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+            <div class="modal-footer">
 
-        #customers tr:hover {
-            background-color: #ddd;
-        }
 
-        #customers th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #04AA6D;
-            color: white;
-        }
+                <a href="#" class="btn" id="btn_ingresar">Guardar</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
 
-        .myButton {
-            box-shadow: 0px 1px 0px 0px #f0f7fa;
-            background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
-            background-color: #33bdef;
-            border-radius: 6px;
-            border: 1px solid #057fd0;
-            display: inline-block;
-            cursor: pointer;
-            color: #ffffff;
-            font-family: Arial;
-            font-size: 15px;
-            font-weight: bold;
-            padding: 6px 24px;
-            text-decoration: none;
-            text-shadow: 0px -1px 0px #5b6178;
-        }
-
-        .myButton:hover {
-            background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-            background-color: #019ad2;
-        }
-
-        .myButton:active {
-            position: relative;
-            top: 1px;
-        }
-
-        .myButtonDelete {
-	box-shadow: 0px 1px 0px 0px #f0f7fa;
-	background:linear-gradient(to bottom, #ed3434 5%, #d10214 100%);
-	background-color:#ed3434;
-	border-radius:6px;
-	border:1px solid #057fd0;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px -1px 0px #5b6178;
-}
-.myButtonDelete:hover {
-	background:linear-gradient(to bottom, #d10214 5%, #ed3434 100%);
-	background-color:#d10214;
-}
-.myButtonDelete:active {
-	position:relative;
-	top:1px;
-}
-    </style>
 </body>
+
+<script>
+    //alert(1);//Muestra un mensaje de alerta 
+    function agregarCliente() {
+        //alert("Agregar Cliente");//Muestra un mensaje de alerta
+        htmlModal = document.getElementById("modal"); //Obtiene el elemento con el id modal
+        htmlModal.setAttribute("class", "modale opened"); //Agrega la clase open al elemento modal
+    }
+
+    function cerrarCliente() {
+        //alert("Agregar Cliente");//Muestra un mensaje de alerta
+        htmlModal = document.getElementById("modal"); //Obtiene el elemento con el id modal
+        htmlModal.setAttribute("class", "modale"); //Agrega la clase open al elemento modal
+    }
+</script>
 
 </html>
