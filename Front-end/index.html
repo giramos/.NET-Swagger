@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo style.css -->
     <link rel="stylesheet" href="menu.css">
+    <script src="script.js"></script>
     <title>Index</title>
 </head>
 <nav id='menu'>
@@ -36,6 +37,7 @@
     <h1>Gestión de Clientes</h1>
     <a onclick="agregarCliente()" href="#" class="myButton">Agregar Cliente</a>
     <table id="customers">
+        <thead>
         <tr>
             <th>Nombre</th>
             <th>Apellido</th>
@@ -43,26 +45,10 @@
             <th>Teléfono</th>
             <th>Acciones</th>
         </tr>
-        <tr>
-            <td>Germán</td>
-            <td>Iglesias</td>
-            <td>german@terra.es</td>
-            <td>666999000</td>
-            <td>
-                <a href="#" class="myButton">Editar</a>
-                <a href="#" class="myButtonDelete">Eliminar</a>
-            </td>
-        </tr>
-        <tr>
-            <td>José</td>
-            <td>Mourinho</td>
-            <td>jose@terra.es</td>
-            <td>666111222</td>
-            <td>
-                <a href="#" class="myButton">Editar</a>
-                <a href="#" class="myButtonDelete">Eliminar</a>
-            </td>
-        </tr>
+    </thead>
+        <tbody>
+
+        </tbody>
     </table>
     <!-- Modal -->
     <div id="modal" class="modale" aria-hidden="true">
