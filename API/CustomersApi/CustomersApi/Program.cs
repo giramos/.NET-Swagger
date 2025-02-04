@@ -1,3 +1,7 @@
+using CustomersApi.CasosDeUso;
+using CustomersApi.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +11,13 @@ builder.Services.AddControllers(); // añade el controlador que hemos creado
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddRouting(routing => routing.LowercaseUrls = true); // minuscula en la ruta . De https://localhost:7163/api/Customer a https://localhost:7163/api/customer
+builder.Services.AddDbContext<CustomerDatabaseContext>(mysqlBuilder =>
+{
+    //builder.UseMySQL("Server=localhost;Port=3306;Database=system;Uid=root;pwd="); // conexion string a nuestra bbdd
+    mysqlBuilder.UseMySQL(builder.Configuration.GetConnectionString("Connection1"));
+});
 
+builder.Services.AddScoped<IUpdateCustomerUseCase, UpdateCustomerUseCase>();
 
 var app = builder.Build(); //  construye una app
 
